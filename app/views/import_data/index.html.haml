@@ -1,0 +1,8 @@
+%p For Player:
+= form_tag import_data_player_data_path, multipart: true do
+  = file_field_tag :data_file
+  = submit_tag "Import"
+%p For Batting:
+= form_tag import_data_batting_data_path, multipart: true do
+  = file_field_tag :data_file
+  = submit_tag "Import"
