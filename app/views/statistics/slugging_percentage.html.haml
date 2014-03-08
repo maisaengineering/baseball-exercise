@@ -11,4 +11,4 @@
         %tr
           %td= batting.player_id
           %td= batting.player.name rescue ''
-          %td= batting.slugging_percentage
+          %td= batting.slugging_percentage.round(4)

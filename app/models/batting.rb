@@ -13,18 +13,18 @@ class Batting < ActiveRecord::Base
   class << self
 
     def most_improved_bat_avg
-      includes(:player).select("(hits/at_bats) AS batting_average,player_id").
+      includes(:player).select("player_id,hits,at_bats,(hits*1.0/nullif(at_bats,0)) AS batting_average").
           with_in_years(2009,2010).where("at_bats >= ?",200).
           order('batting_average DESC')
     end
 
 
     def improved_fantacy_players(year)
-       select("(4*home_runs + runs_batted_in + stolen_base + caught_stealing)  AS fantacy_score,player_id").where(year_id: year).group('player_id').order('fantacy_score DESC') #from battings GROUP BY year_id,player_id
+       select("battings.*,(4*home_runs + runs_batted_in + stolen_base + caught_stealing) AS fantacy_score").where(year_id: year).group('player_id,battings.id').order('fantacy_score DESC') #from battings GROUP BY year_id,player_id
     end
 
     def triple_crown_winner(year)
-      most_avg_batting =  includes(:player).select("(hits/at_bats) AS batting_average,player_id").where(year_id: year).order('batting_average DESC').first
+      most_avg_batting =  includes(:player).select("player_id,hits,at_bats ,(hits/nullif(at_bats,0)) AS batting_average").where(year_id: year).order('batting_average DESC').first
       most_home_runs =  where(year_id: year).order('home_runs DESC').first.player_id
       most_rbi =  where(year_id: year).order('runs_batted_in DESC').first.player_id
       if (most_avg_batting.player_id == most_home_runs && most_avg_batting.player_id == most_rbi)

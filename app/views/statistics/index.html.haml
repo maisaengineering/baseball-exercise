@@ -11,5 +11,5 @@
         %tr
           %td= batting.player_id
           %td= batting.player.name rescue ''
-          %td= batting.batting_average
+          %td= batting.batting_average.round(4)
 

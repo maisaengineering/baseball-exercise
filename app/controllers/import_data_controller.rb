@@ -5,7 +5,7 @@ class ImportDataController < ApplicationController
   end
 
   def player_data
-    s = Roo::CSV.new(params[:data_file].path)
+    s = Roo::CSV.new(params[:data_file].path, csv_options: {col_sep: "\t"})
     s.default_sheet = s.sheets.first
     players = []
     2.upto(s.last_row) do  |i|
@@ -17,7 +17,7 @@ class ImportDataController < ApplicationController
   end
 
   def batting_data
-    s = Roo::CSV.new(params[:data_file].path)
+    s = Roo::CSV.new(params[:data_file].path, csv_options: {col_sep: "\t"})
     s.default_sheet = s.sheets.first
     battings = []
     2.upto(s.last_row) do  |i|
