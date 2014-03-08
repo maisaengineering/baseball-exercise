@@ -29,13 +29,16 @@
           %a.brand(href="#") Baseball Exercise
           .container.nav-collapse
             %ul.nav
-              = render 'layouts/navigation_links'
+              %li= link_to 'About', '#'
     .container-fluid
-
-      .row-fluid
-        .span
-          = bootstrap_flash
-          = yield
-    
+      .row
+        #sidebar.sidebar-nav.span3
+          %ul.nav.nav-tabs.nav-stacked
+            = render 'layouts/navigation_links'
+        #main.span9
+          .row-fluid
+            .span
+              = bootstrap_flash
+              = yield
       %footer
         %p &copy; Company 2014

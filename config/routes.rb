@@ -5,7 +5,13 @@ BaseballExercise::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-    root 'statistics#index'
+  root 'statistics#index'
+
+
+
+  get '/statistics/slugging_percentage',to: 'statistics#slugging_percentage',as: :slugging_percentage
+  get '/statistics/most_improved_fantacy_palyers',to: 'statistics#most_improved_fantacy_palyers',as: :most_improved_fantacy_palyers
+  get '/statistics/triple_crown_winner',to: 'statistics#triple_crown_winner',as: :triple_crown_winner
 
 
   match "/import_data" => 'import_data#index', via:[:get]
