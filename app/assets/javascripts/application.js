@@ -15,3 +15,14 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on('page:fetch', function () {
+    $('#main').animate( {"opacity": "0.4"}, "slow");
+});
+
+
+$(document).on('page:restore', function () {
+    $('#main').fadeIn('slow')
+});
+
