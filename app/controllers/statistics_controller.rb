@@ -9,7 +9,17 @@ class StatisticsController < ApplicationController
   end
 
   def most_improved_fantacy_palyers
-    @improved_players = Batting.improved_players
+    improved_players_2011 = Batting.improved_players(2011).to_a
+    improved_players_2012 = Batting.improved_players(2012).to_a
+    fantacy_palyers = {}
+    improved_players_2011.each do |batting|
+      player = improved_players_2012.detect{|b| b.player_id == batting.player_id}
+       if player and (player.fantacy_score > batting.fantacy_score  )
+         fantacy_palyers[player.player_id] = player.fantacy_score - batting.fantacy_score
+       end
+    end
+    @fantacy_palyers = Hash[fantacy_palyers.sort_by{|k, v| v}.reverse]
+
   end
 
   def triple_crown_winner
