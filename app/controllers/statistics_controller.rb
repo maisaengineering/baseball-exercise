@@ -1,7 +1,6 @@
 class StatisticsController < ApplicationController
 
   def index
-    raise Batting.most_improved.to_sql.inspect
     @most_improved_battings = Batting.most_improved
   end
 

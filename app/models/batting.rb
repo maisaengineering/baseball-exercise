@@ -20,7 +20,7 @@ class Batting < ActiveRecord::Base
 
 
     def improved_players(year)
-      includes(:player).select("(4*home_runs + runs_batted_in + stolen_base + caught_stealing)  AS fantacy_score,player_id").where(year_id: year).group('player_id').order('fantacy_score DESC') #from battings GROUP BY year_id,player_id
+      select("(4*home_runs + runs_batted_in + stolen_base + caught_stealing)  AS fantacy_score,player_id").where(year_id: year).group('player_id').order('fantacy_score DESC') #from battings GROUP BY year_id,player_id
     end
 
     def triple_crown_winner(year)
