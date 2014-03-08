@@ -17,74 +17,73 @@ end
 # 2009
 
 
-Batting.create!(player_id: 'abc1',year_id: 2009,team_id: 'OAC',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc1',year_id: 2009,team_id: 'OAC',at_bats: 600,hits: 2,doubles: 3,triples: 4,
                 home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc1',year_id: 2009,team_id: 'OAC',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+
+
+Batting.create!(player_id: 'abc1',year_id: 2010,team_id: 'OAC',at_bats: 200,hits: 2,doubles: 3,triples: 4,
                 home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
 
 # 2011
 
-Batting.create!(player_id: 'abc1',year_id: 2011,team_id: 'OAC',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc1',year_id: 2011,team_id: 'OAC',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc1',year_id: 2011,team_id: 'OAC',at_bats: 500,hits: 2,doubles: 3,triples: 4,
                 home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
 
 # 2012
 
-Batting.create!(player_id: 'abc1',year_id: 2012,team_id: 'OAC',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc1',year_id: 2012,team_id: 'OAC',at_bats: 400,hits: 2,doubles: 3,triples: 4,
                 home_runs: 3,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc1',year_id: 2012,team_id: 'OAC',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2) # not fantacy
 
 
 # player 2
 # 2009
 
 
-Batting.create!(player_id: 'abc2',year_id: 2009,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 1,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc2',year_id: 2009,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc2',year_id: 2009,team_id: 'OAK',at_bats: 100,hits: 2,doubles: 3,triples: 4,
                 home_runs: 1,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
 
 # 2011
 
-Batting.create!(player_id: 'abc2',year_id: 2011,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc2',year_id: 2011,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc2',year_id: 2011,team_id: 'OAK',at_bats: 200,hits: 2,doubles: 3,triples: 4,
                 home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
 
 # 2012
 
-Batting.create!(player_id: 'abc2',year_id: 2012,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc2',year_id: 2012,team_id: 'OAK',at_bats: 100,hits: 2,doubles: 3,triples: 4,
                 home_runs: 6,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc2',year_id: 2012,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 5,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2) # not fantacy
-
 
 # player 3
 # 2009
 
 
-Batting.create!(player_id: 'abc3',year_id: 2009,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc3',year_id: 2009,team_id: 'OAK',at_bats: 300,hits: 2,doubles: 3,triples: 4,
                 home_runs: 2,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc3',year_id: 2009,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 3,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-
 # 2011
 
-Batting.create!(player_id: 'abc3',year_id: 2011,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 3,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc3',year_id: 2011,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc3',year_id: 2011,team_id: 'OAK',at_bats: 100,hits: 2,doubles: 3,triples: 4,
                 home_runs: 3,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
 
 # 2012
 
-Batting.create!(player_id: 'abc3',year_id: 2012,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
+Batting.create!(player_id: 'abc3',year_id: 2012,team_id: 'OAK',at_bats: 500,hits: 2,doubles: 3,triples: 4,
                 home_runs: 2,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
-Batting.create!(player_id: 'abc3',year_id: 2012,team_id: 'OAK',at_bats: 1,hits: 2,doubles: 3,triples: 4,
-                home_runs: 1,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2) # not fantacy
 
 
+# player 4
+# 2009
+
+
+Batting.create!(player_id: 'abc4',year_id: 2009,team_id: 'NYC',at_bats: 150,hits: 2,doubles: 3,triples: 4,
+                home_runs: 2,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
+# 2011
+
+Batting.create!(player_id: 'abc4',year_id: 2011,team_id: 'NYC',at_bats: 140,hits: 2,doubles: 3,triples: 4,
+                home_runs: 3,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
+
+# 2012
+
+Batting.create!(player_id: 'abc4',year_id: 2012,team_id: 'NYC',at_bats: 150,hits: 2,doubles: 3,triples: 4,
+                home_runs: 2,runs_batted_in: 6,stolen_base: 1,caught_stealing: 2)
 
 
 

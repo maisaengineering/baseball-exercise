@@ -14,7 +14,7 @@ BaseballExercise::Application.routes.draw do
   get '/statistics/triple_crown_winner',to: 'statistics#triple_crown_winner',as: :triple_crown_winner
 
 
-  match "/import_data" => 'import_data#index', via:[:get]
+  match "/import_data" => 'import_data#index', via:[:get],as: :import_data
   post "import_data/player_data"
   post "import_data/batting_data"
   # Example of regular route:
