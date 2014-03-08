@@ -12,15 +12,15 @@ class Batting < ActiveRecord::Base
   #- Class Methods
   class << self
 
-    def most_improved
+    def most_improved_bat_avg
       includes(:player).select("(hits/at_bats) AS batting_average,player_id").
           with_in_years(2009,2010).where("at_bats >= ?",200).
           order('batting_average DESC')
     end
 
 
-    def improved_players(year)
-      select("(4*home_runs + runs_batted_in + stolen_base + caught_stealing)  AS fantacy_score,player_id").where(year_id: year).group('player_id').order('fantacy_score DESC') #from battings GROUP BY year_id,player_id
+    def improved_fantacy_players(year)
+       select("(4*home_runs + runs_batted_in + stolen_base + caught_stealing)  AS fantacy_score,player_id").where(year_id: year).group('player_id').order('fantacy_score DESC') #from battings GROUP BY year_id,player_id
     end
 
     def triple_crown_winner(year)

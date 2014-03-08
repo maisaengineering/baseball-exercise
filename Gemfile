@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+#gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,6 +32,8 @@ gem 'thin'
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 gem 'roo'
+gem 'pg'
+gem 'heroku'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
